@@ -225,7 +225,7 @@ const Signup = () => {
         
         <div
           className={styles.imageSide}
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/signUpregis.svg'})` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/signUpRegis.svg'})` }}
         />
       </div>
     </div>

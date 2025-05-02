@@ -216,7 +216,7 @@ const Login = () => {
         
         <div
           className={styles.imageSide}
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/signInlogin.svg'})` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/img/signInLogin.svg'})` }}
         />
       </div>
     </div>
