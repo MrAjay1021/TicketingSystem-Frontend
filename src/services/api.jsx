@@ -7,7 +7,7 @@ import { heroData, partnersData, featuresData, pricingData, testimonialsData } f
 // Default API URL with fallback
 const API_URL = process.env.REACT_APP_API_URL || 
   (process.env.NODE_ENV === 'production'
-    ? 'https://ticketingsystem-backend.onrender.com/api'
+    ? 'https://ticketingsystem-backend-amb8.onrender.com/api'
     : 'http://localhost:5000/api');
 
 /**
