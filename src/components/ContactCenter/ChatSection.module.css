@@ -1,0 +1,400 @@
+.chatSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid #D1D6DA;
+  background: #FFFFFF;
+  position: relative;
+}
+
+.noSelection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6A6B70;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #E4E4E4;
+  height: 48px;
+}
+
+.chatInfo h3 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #86898C;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.resolveButton {
+  background: #5E9BD5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.resolveButton:hover {
+  background: #4a89c7;
+}
+
+.homeIcon img {
+  width: 20px;
+  height: 20px;
+}
+
+.chatMessages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dateMarker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  position: relative;
+}
+
+.dateMarker span {
+  background: #FFFFFF;
+  padding: 0 10px;
+  color: #8C8E92;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.dateMarker::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #E4E4E4;
+  z-index: 0;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.userMessage {
+  align-self: flex-start;
+}
+
+.agentMessage {
+  align-self: flex-end;
+}
+
+.message {
+  background: #F2F7FF;
+  border-radius: 12px;
+  padding: 10px 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.userMessage .message {
+  background: #F2F7FF;
+}
+
+.agentMessage .message {
+  background: #E6F4FF;
+}
+
+.messageInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #8C8E92;
+}
+
+.messageSender {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+}
+
+.chatInputContainer {
+  padding: 20px;
+  border-top: 1px solid #D1D6DA;
+}
+
+.chatInputContainer form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.chatInput {
+  width: 100%;
+  height: 64px;
+  padding: 12px 50px 12px 20px;
+  border: 1px solid #D1D6DA;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+.chatInput::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.sendButton {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.sendButton img {
+  width: 18px;
+  height: 18px;
+}
+
+.resolvedMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #5E9BD5;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .chatSection {
+    height: 500px;
+    border-right: none;
+    border-bottom: 1px solid #D1D6DA;
+  }
+}
+
+@media (max-width: 768px) {
+  .chatHeader {
+    padding: 8px 15px;
+    height: 42px;
+  }
+  
+  .chatInfo h3 {
+    font-size: 14px;
+  }
+  
+  .resolveButton {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+  
+  .homeIcon img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .chatMessages {
+    padding: 15px;
+  }
+  
+  .dateMarker span {
+    font-size: 12px;
+  }
+  
+  .message {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .messageContainer {
+    max-width: 85%;
+  }
+  
+  .chatInputContainer {
+    padding: 15px;
+  }
+  
+  .chatInput {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatSection {
+    height: 400px;
+  }
+  
+  .chatHeader {
+    padding: 6px 10px;
+    height: 38px;
+  }
+  
+  .chatInfo h3 {
+    font-size: 13px;
+  }
+  
+  .resolveButton {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+  
+  .homeIcon img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .chatMessages {
+    padding: 10px;
+  }
+  
+  .message {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .messageContainer {
+    max-width: 90%;
+    margin-bottom: 15px;
+  }
+  
+  .messageSender {
+    font-size: 11px;
+  }
+  
+  .chatInputContainer {
+    padding: 10px;
+  }
+  
+  .chatInput {
+    height: 40px;
+    font-size: 13px;
+    padding: 10px 40px 10px 15px;
+  }
+  
+  .sendButton {
+    width: 24px;
+    height: 24px;
+    right: 8px;
+  }
+  
+  .sendButton img {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .resolvedMessage {
+    font-size: 16px;
+  }
+}
+
+/* Add messageRow styling */
+.messageRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* Add avatar styling */
+.avatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background-color: #e1e9f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #184E7F;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.userMessage .avatar {
+  background-color: #f0f2f5;
+  color: #666;
+}
+
+.agentMessage .avatar {
+  background-color: #E6F4FF;
+}
+
+/* Add margin to message sender */
+.messageSender {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  margin: 0 8px;
+}
+
+/* Add styling for message timestamp */
+.messageTimestamp {
+  display: block;
+  font-size: 12px;
+  color: #8C8E92;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.userMessage .messageTimestamp {
+  color: #86898C;
+}
+
+/* System message styles */
+.systemMessage {
+  align-self: center;
+  max-width: 60%;
+}
+
+.systemMessage .message {
+  background: transparent;
+  border: 1px solid #F1F1F1;
+}
+
+/* Missed chat notification styles */
+.missedChatMessage {
+  background: transparent !important;
+  border: none !important;
+}
+
+.missedChatText {
+  color: #ff3939 !important;
+  font-weight: 500;
+  text-align: center;
+}

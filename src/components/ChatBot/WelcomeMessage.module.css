@@ -1,0 +1,118 @@
+.welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.textareaContainer {
+  position: relative;
+  width: 100%;
+}
+
+.messageTextarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 9px;
+  resize: none;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #425B76;
+  background: #F6F7F5;
+}
+
+.messageTextarea:focus {
+  outline: 1px solid #184E7F;
+}
+
+.characterCount {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #838383;
+}
+
+.messagePreview {
+  margin-top: 10px;
+}
+
+.previewContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  background: #FFFFFF;
+  border: 1px solid #F0F0F0;
+  border-radius: 9px;
+}
+
+.previewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.previewText {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #425B76;
+  margin: 0;
+  word-break: break-word;
+}
+
+.editButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.editButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .messageTextarea {
+    height: 80px;
+    font-size: 13px;
+  }
+  
+  .previewText {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .messageTextarea {
+    height: 70px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  
+  .characterCount {
+    font-size: 9px;
+  }
+  
+  .previewContainer {
+    padding: 15px 12px;
+  }
+  
+  .previewText {
+    font-size: 12px;
+    line-height: 20px;
+  }
+} 

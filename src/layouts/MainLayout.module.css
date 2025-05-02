@@ -1,0 +1,49 @@
+.mainLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  padding-top: 104px; /* Same as header height */
+  width: 100%;
+}
+
+/* Add media query to adjust padding for mobile */
+@media (max-width: 768px) {
+  .mainContent {
+    padding-top: 80px; /* Same as header height on mobile */
+  }
+}
+
+/* Add background gradients/ellipses as per design */
+.mainLayout::before,
+.mainLayout::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+/* Ellipse 3954 */
+.mainLayout::before {
+  width: 178px;
+  height: 178px;
+  left: 1089.5px;
+  top: 207.61px;
+  background: #629DD4;
+  filter: blur(91.05px);
+}
+
+/* Ellipse 3955 */
+.mainLayout::after {
+  width: 178px;
+  height: 178px;
+  left: 901.5px;
+  top: 322.61px;
+  background: #256CB5;
+  filter: blur(219.95px);
+} 

@@ -1,0 +1,291 @@
+.analytics {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.pageTitle {
+  color: #6A6B70;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Loading and Error States */
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  font-size: 16px;
+  color: #6A6B70;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.error {
+  color: #FF3B30;
+}
+
+/* Chart Card Styles */
+.chartCard {
+  width: 100%;
+  max-width: 702px;
+  height: 408px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chartTitle {
+  color: #00D907;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.menuIcon {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 320px;
+}
+
+/* Custom Tooltip Styles */
+.customTooltip {
+  background: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  width: 89px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 7px rgba(3, 2, 41, 0.07);
+  position: relative;
+}
+
+.customTooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid #000000;
+}
+
+.tooltipLabel {
+  color: #FFFFFF;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.tooltipValue {
+  color: #FFFFFF;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0;
+}
+
+/* Metrics Section Styles */
+.metricsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 702px;
+  box-sizing: border-box;
+}
+
+.metricCard {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.metricTitle {
+  color: #00D907;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  margin-bottom: 10px;
+}
+
+.metricValue {
+  color: #00D907;
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 34px;
+  margin: 10px 0;
+}
+
+.metricDescription {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  max-width: 647px;
+}
+
+.metricHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Override default margins for header-aligned metrics */
+.metricHeader .metricTitle {
+  margin-bottom: 0;
+}
+.metricHeader .metricValue {
+  margin: 0;
+}
+
+/* Circle Progress Styles */
+.circleProgress {
+  width: 114px;
+  height: 114px;
+  border: 1px solid #F7F7F8;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circleProgress::before {
+  content: '';
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border: 6px solid rgba(91, 147, 255, 0.05);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circleProgress::after {
+  content: '';
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top: 6px solid #00D907;
+  border-right: 6px solid #00D907;
+  border-bottom: 6px solid #00D907;
+  transform: rotate(230deg);
+  z-index: 2;
+}
+
+.progressValue {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #030229;
+  z-index: 3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .chartCard {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
+  
+  .metricsContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .metricDescription {
+    max-width: 100%;
+  }
+  
+  .metricHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .circleProgress {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics {
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .chartTitle,
+  .metricTitle {
+    font-size: 20px;
+  }
+  
+  .metricValue {
+    font-size: 22px;
+  }
+  
+  .circleProgress {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .circleProgress::before,
+  .circleProgress::after {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .chartContainer {
+    height: 250px;
+  }
+  
+  .customTooltip {
+    width: 75px;
+    height: 50px;
+  }
+  
+  .tooltipValue {
+    font-size: 14px;
+  }
+} 

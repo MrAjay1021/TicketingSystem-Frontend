@@ -1,0 +1,52 @@
+/* layout.css */
+
+.page-wrapper {
+  display: flex;
+  height: 100vh;        /* fill viewport */
+  overflow: hidden;     /* prevent the whole page from scrolling */
+  width: 100%;
+}
+
+.sidebar {
+  width: 94px;          /* match existing sidebar width */
+  flex-shrink: 0;       /* never let it collapse */
+  position: fixed;      /* ensures sidebar stays fixed in place */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  z-index: 100;         /* sit above content if they overlap */
+}
+
+.content-wrapper {
+  flex: 1;              /* everything else */
+  margin-left: 94px;    /* carve out sidebar space */
+  width: calc(100% - 94px);
+  max-width: 1440px;    /* match existing max-width */
+  overflow-y: auto;     /* scroll just the content */
+  height: 100vh;
+}
+
+/* Media queries for responsive design - matching existing breakpoints */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  
+  .content-wrapper {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 50px;
+  }
+  
+  .content-wrapper {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
+} 

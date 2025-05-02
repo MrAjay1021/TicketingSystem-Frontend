@@ -1,0 +1,242 @@
+.featuresSection {
+  --indigo-50: #F2F8FD;
+  --blue-gray-800: #30404D;
+  --indigo-300: #629DD4;
+  --indigo-700: #2F5F8B;
+  --blue-gray-700: #425B76; 
+  --blue-gray-800-03: #394B59;
+  --indigo-800: #244779;
+  --indigo-800-01: #184E7F;
+  --indigo-400: #3A7ABD;
+  --blue-800-01: #256CB5;
+  --blue-800-99: #256CB599;
+  --radius-md: 4px;
+  --space-xl: 12px;
+  --space-2xl: 14px;
+  --space-3xl: 16px;
+  --space-4xl: 18px;
+  --space-6xl: 24px;
+  --space-7xl: 36px;
+  --shadow-md: 0 5.82px 34px 0 rgba(0,0,0,0.1);
+  
+  background-color: var(--indigo-50);
+  padding: 80px 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+  box-sizing: border-box;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: var(--space-6xl);
+  width: 725px;
+  margin: 0 auto 80px;
+}
+
+.title {
+  width: 673px;
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--blue-gray-800);
+  margin: unset;
+}
+
+.description {
+  width: 725px;
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--blue-gray-800);
+  margin: unset;
+}
+
+.funnelWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+  position: relative;
+  gap: 20px;
+}
+
+.funnelTextContent {
+  width: 45%;
+  position: relative;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.funnelImage {
+  width: 55%;
+  height: 450px;
+  position: relative;
+}
+
+.socialWrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.socialImg {
+  max-width: 100%;
+}
+
+.funnelGraphic {
+  position: relative;
+  padding-top: 30px;
+}
+
+.funnelImg {
+  width: 100%;
+  height: auto;
+}
+
+/* Blue ellipse effect similar to the reference */
+.funnelImage::before {
+  content: '';
+  position: absolute;
+  width: 178px;
+  height: 178px;
+  right: 40px;
+  top: 13px;
+  background: var(--blue-800-01);
+  opacity: 0.6;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.featureItem {
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  margin: unset;
+}
+
+.featureItem:nth-child(1) {
+  top: 100px;
+  width: 435px;
+}
+
+.featureItem:nth-child(2) {
+  top: 240px;
+  width: 435px;
+}
+
+.featureItem:nth-child(3) {
+  top: 400px;
+  width: 435px;
+}
+
+.featureTitle {
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: var(--blue-gray-800);
+  margin: 0 0 var(--space-xl);
+}
+
+.featureDescription {
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--blue-gray-800-03);
+  max-width: 540px;
+  margin: unset;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 80px;
+  }
+  
+  .titleWrapper {
+    width: 100%;
+  }
+  
+  .title, .description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .funnelWrapper {
+    flex-direction: column;
+    gap: var(--space-7xl);
+  }
+  
+  .funnelTextContent, .funnelImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .funnelTextContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6xl);
+  }
+  
+  .funnelImage::before {
+    display: none;
+  }
+  
+  .featureItem {
+    position: relative;
+    margin-bottom: var(--space-6xl);
+  }
+  
+  .featureItem:nth-child(1),
+  .featureItem:nth-child(2),
+  .featureItem:nth-child(3) {
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+} 

@@ -1,0 +1,106 @@
+/* Toast.module.css */
+.toastContainer {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  width: auto;
+  max-width: 500px;
+  padding: 0;
+}
+
+.toastBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 16px;
+  animation: slideIn 0.3s ease-out;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+  will-change: opacity, transform;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.success {
+  background-color: #10B981;
+  color: white;
+  border-left: 4px solid #059669;
+}
+
+.error {
+  background-color: #FF4B60;
+  color: white;
+  border-left: 4px solid #E11D48;
+}
+
+.info {
+  background-color: #3B82F6;
+  color: white;
+  border-left: 4px solid #2563EB;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.message {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-right: 8px;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} 

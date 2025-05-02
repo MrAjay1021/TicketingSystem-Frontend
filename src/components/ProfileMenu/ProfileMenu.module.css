@@ -1,0 +1,155 @@
+/* Profile section at bottom of sidebar */
+.profileSection {
+  position: absolute;
+  left: 35px;
+  bottom: 39px;
+  width: 24px;
+  height: 24px;
+  z-index: 101;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.profileIcon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.profileLink:hover .profileIcon {
+  filter: brightness(0.8);
+}
+
+/* Signout menu styling */
+.signoutMenu {
+  position: absolute;
+  bottom: 100%; /* Position above the profile icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  margin-left: -50px;
+  background: white;
+  border-radius: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  z-index: 102;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.signoutButton {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: -2px 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #424242;
+  border-radius: 20px;
+}
+
+.signoutButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin-left: ;
+}
+
+.signoutIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+/* Triangle pointer */
+.signoutMenu::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+  
+}
+
+.menuText {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #424242;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.menuText.visible {
+  visibility: visible;
+  opacity: 1;
+  width: 52px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1440px) {
+  .profileSection {
+    position: fixed;
+    left: 35px;
+    bottom: 39px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profileSection {
+    left: 18px;
+  }
+  
+  .menuText {
+    font-size: 9px;
+  }
+  
+  .signoutButton {
+    font-size: 11px;
+  }
+  
+  .signoutIcon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileSection {
+    left: 13px;
+  }
+  
+  .signoutMenu {
+    width: 90px;
+  }
+} 

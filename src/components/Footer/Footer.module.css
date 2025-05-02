@@ -1,0 +1,334 @@
+.footer {
+  /* Core UI variables */
+  --black_900: #020617;
+  --blue_gray_800_05: #30404D;
+  --blue_gray_300_01: #9da7b0;
+  --blue_gray_200: #98A8B3;
+  --indigo_800: #244779;
+  --indigo_400: #3A7ABD;
+  --indigo_300: #629DD4;
+  --indigo_200: #A2C2DF;
+  --indigo_50: #EBF1F9; 
+  --white_a700: #FFFFFF;
+  --color_gray_900: #1B1A1A;
+  --blue_hover: #1877F2; /* New variable for the blue hover effect */
+  
+  /* Spacing variables */
+  --space-md: 8px;
+  --space-lg: 10px;
+  --space-xl: 12px;
+  --space-3xl: 16px;
+  --space-4xl: 18px;
+  --space-5xl: 22px;
+  --space-6xl: 24px;
+  --space-7xl: 36px;
+  --space-8xl: 96px;
+  
+  /* Radius variables */
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 12px;
+  
+  /* Shadow variables */
+  --shadow-sm: 0 1px 8px 0 rgba(0, 0, 0, 0.09);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+  width: 100%;
+  background: var(--indigo_50);
+  padding-top: var(--space-8xl);
+  padding-bottom: var(--space-8xl);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  font-variation-settings: normal;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logoLink {
+  position: relative;
+  top: 0;
+  transition: top 0.2s ease, transform 0.2s ease;
+  display: block;
+}
+
+.logoLink:hover {
+  transform: scale(1.03);
+}
+
+.logoLink:active {
+  top: -3px; /* This makes the logo move up when clicked */
+}
+
+.logo {
+  width: 176px;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: var(--space-7xl);
+}
+
+.linkSection {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 180px;
+  flex: 1;
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--color_gray_900);
+  margin-bottom: var(--space-6xl);
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  transition: top 0.2s ease, color 0.2s ease;
+}
+
+.sectionTitle:hover {
+  color: var(--blue_hover);
+}
+
+.sectionTitle:active {
+  top: -3px; /* This makes the title move up when clicked */
+}
+
+.linkList {
+  list-style-type: none;
+  padding: 0;
+  margin: unset;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  box-sizing: border-box;
+}
+
+.linkList li {
+  box-sizing: border-box;
+}
+
+.linkList a {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--blue_gray_800_05);
+  text-decoration: none;
+  transition: color 0.2s ease, top 0.2s ease;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+}
+
+.linkList a:hover {
+  color: var(--blue_hover);
+}
+
+.linkList a:active {
+  top: -3px; /* This makes the link move up when clicked */
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--space-3xl);
+  margin-top: 62px;
+  box-sizing: border-box;
+}
+
+.socialLink {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease, color 0.2s ease;
+  border-radius: var(--radius-xl);
+  background-color: transparent;
+  box-sizing: border-box;
+  color: var(--color_gray_900);
+}
+
+.socialLink:hover {
+  transform: translateY(-4px);
+  color: var(--blue_hover);
+}
+
+.socialLink img {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  filter: brightness(0.9);
+  transition: filter 0.2s ease;
+}
+
+.socialLink:hover img {
+  filter: brightness(1);
+  /* Adding a blue tint to the icons on hover */
+  filter: drop-shadow(0px 0px 1px var(--blue_hover));
+}
+
+.backgroundEllipse {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: 15%;
+  top: 60%;
+  background: linear-gradient(180deg, var(--indigo_400) 0%, var(--indigo_200) 100%);
+  filter: blur(120px);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.copyright {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--blue_gray_300_01);
+  margin-top: var(--space-7xl);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1440px) {
+  .container {
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .linksContainer {
+    gap: var(--space-5xl);
+  }
+  
+  .linkSection {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 992px) {
+  .linksContainer {
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  
+  .linkSection {
+    min-width: 200px;
+    width: calc(33.33% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--space-7xl) 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+    gap: var(--space-7xl);
+  }
+  
+  .linksContainer {
+    flex-direction: column;
+    gap: var(--space-7xl);
+  }
+  
+  .linkSection {
+    width: 100%;
+  }
+  
+  .socialLinks {
+    margin-top: var(--space-6xl);
+  }
+  
+  .backgroundEllipse {
+    right: 0;
+    top: 75%;
+  }
+}
+
+/* Button hover effects */
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #EFF0EC;
+  border-radius: 8px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.2s; /* Smooth transition */
+  width: 96px;
+  height: 48px;
+}
+
+.loginButton:hover {
+  background-color: #e5e6e2; /* Subtle background change on hover */
+}
+
+/* Signup button hover effect */
+.signupButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: var(--blue_hover);
+  border-radius: 32px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.2s; /* Smooth transition */
+  width: 174px;
+  height: 48px;
+}
+
+.signupButton:hover {
+  background-color: #1669d5; /* Darker blue on hover */
+} 

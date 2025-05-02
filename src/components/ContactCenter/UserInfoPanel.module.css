@@ -1,0 +1,373 @@
+.userInfoPanel {
+  width: 500px;
+  height: 100%;
+  background: #FAFBFC;
+  border: 1px solid #D1D6DA;
+  padding: 20px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.noSelection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6A6B70;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #184E7F;
+  margin-bottom: 15px;
+}
+
+.detailsSection {
+  margin-bottom: 30px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.detailIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.detailText {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7F7F7F;
+}
+
+.teammatesSection {
+  margin-bottom: 30px;
+}
+
+.teammateItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border: 1px solid #E4E4E4;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.teammateName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #7F7F7F;
+}
+
+.dropdownIcon {
+  font-size: 10px;
+  color: #7F7F7F;
+  margin-left: auto;
+}
+
+.ticketStatusSection {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.ticketStatusItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #E4E4E4;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.ticketStatusItem .detailText {
+  flex: 1;
+  margin: 0 15px;
+  color: #555;
+  font-weight: 400;
+}
+
+.statusDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #E4E4E4;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  overflow: hidden;
+}
+
+.statusOption {
+  padding: 12px 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #7F7F7F;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.statusOption:hover {
+  background-color: #f5f5f5;
+}
+
+.statusOption.active {
+  font-weight: 600;
+  color: #5E9BD5;
+}
+
+.statusOption:last-child {
+  border-bottom: none;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  background-color: #e0e0e0;
+  text-transform: uppercase;
+}
+
+.confirmDialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  z-index: 20;
+  max-width: 450px;
+  min-width: 350px;
+}
+
+.confirmOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.confirmDialog p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.cancelButton, .confirmButton {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  min-width: 100px;
+  transition: all 0.2s ease;
+}
+
+.cancelButton {
+  background: transparent;
+  color: #666;
+}
+
+.cancelButton:hover {
+  background: #f5f5f5;
+}
+
+.confirmButton {
+  background: #1a5a96;
+  color: white;
+}
+
+.confirmButton:hover {
+  background: #134b7c;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .userInfoPanel {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .userInfoPanel {
+    padding: 15px;
+    max-height: 400px;
+  }
+  
+  .sectionTitle {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  
+  .detailItem {
+    margin-bottom: 15px;
+  }
+  
+  .detailIcon {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+  }
+  
+  .detailText {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .teammateItem {
+    padding: 8px 12px;
+  }
+  
+  .teammateName {
+    font-size: 14px;
+  }
+  
+  .ticketStatusItem {
+    padding: 8px 12px;
+  }
+  
+  .statusOption {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .confirmDialog {
+    padding: 15px;
+  }
+  
+  .confirmDialog p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .cancelButton, .confirmButton {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .userInfoPanel {
+    padding: 12px;
+    max-height: 350px;
+  }
+  
+  .sectionTitle {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .detailItem {
+    margin-bottom: 12px;
+  }
+  
+  .detailIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  
+  .detailText {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  
+  .teammateItem {
+    padding: 7px 10px;
+    margin-bottom: 8px;
+  }
+  
+  .teammateName {
+    font-size: 13px;
+  }
+  
+  .ticketStatusItem {
+    padding: 7px 10px;
+  }
+  
+  .statusOption {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  
+  .confirmDialog {
+    padding: 12px;
+    width: 90%;
+  }
+  
+  .confirmDialog p {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  
+  .cancelButton, .confirmButton {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+} 

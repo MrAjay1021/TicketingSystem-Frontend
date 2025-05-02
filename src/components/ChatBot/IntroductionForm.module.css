@@ -1,0 +1,158 @@
+.introductionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fieldHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fieldLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #505050;
+}
+
+.requiredToggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.requiredLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #505050;
+}
+
+.fieldInputContainer {
+  width: 100%;
+}
+
+.fieldInput {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #C4C4C4;
+  border-radius: 0;
+  padding: 0 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+}
+
+.fieldInput:focus {
+  outline: none;
+  border-color: #184E7F;
+}
+
+.submitButtonContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.submitButtonLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #505050;
+}
+
+.submitButtonInputContainer {
+  width: 100%;
+}
+
+.submitButtonInput {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #C4C4C4;
+  border-radius: 0;
+  padding: 0 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+}
+
+.submitButtonInput:focus {
+  outline: none;
+  border-color: #184E7F;
+}
+
+.formPreview {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.submitButtonPreview {
+  width: 290px;
+  height: 44px;
+  background: #184E7F;
+  border-radius: 13px;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .fieldInput, .submitButtonInput {
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .submitButtonPreview {
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fieldLabel, .submitButtonLabel {
+    font-size: 12px;
+  }
+  
+  .fieldInput, .submitButtonInput {
+    height: 36px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+  
+  .submitButtonPreview {
+    width: 220px;
+    height: 36px;
+    font-size: 13px;
+  }
+} 

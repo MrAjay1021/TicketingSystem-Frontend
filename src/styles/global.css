@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Montserrat', 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom colors for svg icons */
+svg path {
+  fill: #424242;
+}
+
+.active svg path {
+  fill: #184E7F;
+}
+
+@media (max-width: 1440px) {
+  .app-container {
+    align-items: flex-start;
+  }
+} 

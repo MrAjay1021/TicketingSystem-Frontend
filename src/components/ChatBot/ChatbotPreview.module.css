@@ -1,0 +1,281 @@
+.previewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatbotInterface {
+  width: 340px;
+  height: 580px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  position: relative;
+}
+
+/* Chat Header */
+.chatHeader {
+  width: 100%;
+  height: 65px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatarContainer {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  object-fit: cover;
+}
+
+.statusIndicator {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background: #00BDA5;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  bottom: -2px;
+  right: -2px;
+}
+
+.botName {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+/* Chat Body */
+.chatBody {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #F5F5F5;
+}
+
+/* Messages Container */
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.messageBubble {
+  max-width: 231px;
+  padding: 15px;
+  background: #FFFFFF;
+  border-radius: 9px;
+  align-self: flex-start;
+}
+
+.messageText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  margin: 0;
+}
+
+/* Welcome Message */
+.welcomeContainer {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+}
+
+.welcomeAvatar {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: -24px;
+  left: 10px;
+  z-index: 2;
+}
+
+.welcomeAvatarImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.welcomeBubble {
+  background: #FFFFFF;
+  border-radius: 9px;
+  padding: 15px;
+  padding-top: 30px;
+  margin-left: 20px;
+  max-width: 230px;
+}
+
+.welcomeText {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #425B76;
+  margin: 0;
+}
+
+/* Form Container */
+.formContainer {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 9px;
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fieldLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 9px;
+  color: #505050;
+}
+
+.fieldInput {
+  border: none;
+  border-bottom: 0.7px solid #C4C4C4;
+  background: transparent;
+  padding: 5px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  line-height: 9px;
+  color: #000000;
+}
+
+.submitButton {
+  background: #184E7F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9px;
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: center;
+  width: 80%;
+}
+
+/* Chat Input */
+.chatInputContainer {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.chatInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 20px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  color: #8498B6;
+}
+
+.sendButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F0F0F0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sendIcon {
+  font-style: normal;
+  color: #606060;
+}
+
+/* Toggle Button */
+.toggleButton {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: #184E7F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  background: #0d3a5f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .chatbotInterface {
+    width: 300px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbotInterface {
+    width: 280px;
+    height: 480px;
+  }
+  
+  .chatHeader {
+    height: 55px;
+    padding: 12px;
+  }
+  
+  .avatar, .avatarContainer {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .botName {
+    font-size: 14px;
+  }
+  
+  .statusIndicator {
+    width: 9px;
+    height: 9px;
+  }
+} 
