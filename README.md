@@ -40,7 +40,7 @@ The application uses custom components for consistent styling and user experienc
 - **Forms** - Standardized form components
 - **Navigation** - Sidebar, header, and navigation elements
 
-- Demo Credentials
+## Demo Credentials
 
-username: admin1
-Password: qwer1234
+- **username**: admin1
+- **Password**: qwer1234
